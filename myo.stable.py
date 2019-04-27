@@ -451,9 +451,9 @@ if __name__ == '__main__':
     print (emg);
 
   myo = MyoRaw (sys. argv [1] if len (sys. argv) >= 2 else None);
-#  myo. addEmgHandler (procEmg);
+  myo. addEmgHandler (procEmg);
 
-#  myo. addArmHandler (lambda arm, xdir: print ('arm', arm, 'xdir', xdir));
+  myo. addArmHandler (lambda arm, xdir: print ('arm', arm, 'xdir', xdir));
   myo. addPoseHandler (lambda pose: print ('pose', pose));
 
   myo. connect()
